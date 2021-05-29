@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: ddts
+    password: Zcsdd2020!$
+    url: jdbc:oracle:thin:@132.97.152.73:1521:search
+    driver-class-name: oracle.jdbc.OracleDriver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.entity
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
