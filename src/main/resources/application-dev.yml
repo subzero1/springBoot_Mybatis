@@ -5,7 +5,7 @@ spring:
   datasource:
     username: ddts
     password: Zcsdd2020!$
-    url: jdbc:oracle:thin:@132.97.152.73:1521:search
+    url: jdbc:oracle:thin:@132.126.123.161:1521:search
     driver-class-name: oracle.jdbc.OracleDriver
 
 mybatis:
