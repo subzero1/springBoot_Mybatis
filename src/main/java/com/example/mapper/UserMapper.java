@@ -12,5 +12,7 @@ import java.util.Map;
 @Repository
 public interface UserMapper {
 
-    Map Sel(int id);
+    Map getUser(String id);
+
+//    void save(Map<String,Object> paramMap);
 }

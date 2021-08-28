@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @MapperScan("com.example.mapper") //扫描的mapper
 @SpringBootApplication
+//@ImportResource("classpath:transaction.xml")
 public class DemoApplication {
 
 	public static void main(String[] args) {

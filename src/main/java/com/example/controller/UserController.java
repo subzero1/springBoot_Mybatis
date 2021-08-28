@@ -2,11 +2,10 @@ package com.example.controller;
 
 import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -16,14 +15,15 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping("/testBoot")
+@RequestMapping("/test")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("getUser/{id}")
-    public Map GetUser(@PathVariable int id){
-        return new HashMap();
-     }
+    @RequestMapping("getUser")
+    public Map GetUser(@RequestParam String id) {
+//        userService.save();
+        return userService.getUser(id);
+    }
 }

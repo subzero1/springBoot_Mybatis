@@ -2,7 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.mapper.UserMapper">
 
-    <select id="Sel" resultType="hashmap">
-        select * from user where id = #{id}
+    <select id="getUser" resultType="hashmap">
+        select * from DDHH_USER_PASS t where umenb = #{id,jdbcType=VARCHAR}
     </select>
+<!--    <update id="save" parameterMap="hashmap">-->
+<!--        UPDATE DDHH_USER_PASS T SET T.UPASS=#{UPASS,jdbcType=VARCHAR} WHERE T.UPID = #{UPID,jdbcType=INTEGER} AND T.ENABLED=1-->
+<!--    </update>-->
 </mapper>
