@@ -5,7 +5,7 @@
     <select id="getUser" resultType="hashmap">
         select * from DDHH_USER_PASS t where umenb = #{id,jdbcType=VARCHAR}
     </select>
-<!--    <update id="save" parameterMap="hashmap">-->
-<!--        UPDATE DDHH_USER_PASS T SET T.UPASS=#{UPASS,jdbcType=VARCHAR} WHERE T.UPID = #{UPID,jdbcType=INTEGER} AND T.ENABLED=1-->
-<!--    </update>-->
+    <update id="save" parameterType="hashmap">
+        UPDATE DDHH_USER_PASS T SET T.UPASS=#{UPASS,jdbcType=VARCHAR} WHERE T.UPID = #{UPID,jdbcType=INTEGER} AND T.ENABLED=1
+    </update>
 </mapper>

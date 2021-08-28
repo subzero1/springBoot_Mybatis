@@ -23,7 +23,11 @@ public class UserController {
 
     @RequestMapping("getUser")
     public Map GetUser(@RequestParam String id) {
-//        userService.save();
+        try {
+            userService.save();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return userService.getUser(id);
     }
 }

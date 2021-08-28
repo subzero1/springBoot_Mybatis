@@ -14,5 +14,5 @@ public interface UserMapper {
 
     Map getUser(String id);
 
-//    void save(Map<String,Object> paramMap);
+    void save(Map<String,Object> paramMap);
 }
